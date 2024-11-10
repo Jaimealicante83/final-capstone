@@ -1,5 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500&family=Karla:wght@400;700&display=swap');
+
+:root {
+  --primary-green: #49SE57;
+  --primary-yellow: #F4CE14;
+  --secondary-salmon: #EE9972;
+  --secondary-peach: #FBDABB;
+  --highlight-light: #EDEFEE;
+  --highlight-dark: #333333;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+}
+html{
+  font-size: 62.5%;
+}
+h1, h2, h3, h4, h5, h6, p, ul, li{
+  margin: 0;
+  color: var(--highlight-dark);
+}
+h1, h2, h3 {
+  font-family: 'Markazi Text', serif;
+}
+
+h1{
+  font-size: 7rem;
+  line-height: 5rem;
+}
+.subtitle{
+  font-size: 6rem;
+  line-height: 4.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App > * {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -34,5 +78,335 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/*General Style*/
+.btn-black{
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  background-color: var(--highlight-dark);
+  color: white;
+  letter-spacing: .1rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.btn-black:hover{
+  background-color: black;
+}
+
+.container{
+  width: 100%;
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 993px){
+  .container{
+    width: 100%;
+    max-width: 1200px; 
+  }
+}
+
+/*Components style*/
+.Nav{
+  display: flex;
+  height: 8rem;
+  width: 100%;
+}
+
+.Nav .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  background-color: rgb(35, 35, 35);
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.Nav img{
+  height: 11rem;
+  width: auto;
+}
+.Nav ul{
+  display: none;
+}
+@media screen and (min-width: 993px){
+  .Nav ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    list-style: none;
+    color: white;
+  }
+}
+.Nav ul li a{
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.Hero .container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 993px){
+  .Hero .container{
+  flex-direction: row;
+  gap: 7rem;
+  }
+}
+
+.Hero .container .box-title{
+  width: 100%;
+  order: 2;
+}
+@media screen and (min-width: 993px){
+  .Hero .container .box-title{
+    width: 50%;
+    order: 1;
+  }
+}
+
+.Hero .container .box-title h2{
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.Hero .container .box-title p{
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.Hero .container .hero-image-box{
+  width: 100%;
+  order: 1;
+}
+@media screen and (min-width: 993px){
+  .Hero .container .hero-image-box{
+    width: 50%;
+    order: 2;
+  }
+}
+
+.Hero .container .hero-image-box img{
+  max-width: 100%;
+}
+@media screen and (min-width: 993px){
+  .Hero .container .hero-image-box img{
+    max-width: 500px;
+  }
+}
+
+
+.Specials .cards-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 993px){
+  .Specials .cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+}
+
+.Specials .cards-wrapper .card{
+  width: 100%;
+  flex: 1;
+  max-width: 33.33%;
+  border: 1px solid black;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 993px){
+  .Specials .cards-wrapper .card{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.Specials .cards-wrapper .card img{
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.Specials .Card h3{
+  font-size: 3.4rem;
+  color: var(--highlight-dark);
+}
+
+.Specials .Card p{
+  font-size: 1.6rem;
+  color: var(--highlight-dark);
+  margin-bottom: 2rem;
+}
+
+.Specials .Card h3,
+.Specials .Card p {
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.Testimonials{
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+.Testimonials .testimonial-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 993px) {
+  .Testimonials .testimonial-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+}
+
+.Testimonials .testimonial-wrapper .card-testimonial {
+  width: 100%;
+  border: 1px solid black;
+  padding: 1rem;
+}
+@media screen and (min-width: 993px) {
+  .Testimonials .testimonial-wrapper .card-testimonial {
+    width: 100%;
+    border: 1px solid black;
+    padding: 1rem;
+    min-width: 33%;
+  }
+}
+
+.Testimonials .testimonial-wrapper .card-testimonial img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5rem;
+}
+
+.Testimonials .CardTestimonial h3 {
+  font-size: 3.4rem;
+  color: var(--highlight-dark);
+}
+
+.Testimonials .CardTestimonial p {
+  font-size: 1.6rem;
+  color: var(--highlight-dark);
+  margin-bottom: 2rem;
+}
+.stars-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.star {
+  font-size: 2rem;
+}
+
+.About .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 993px){
+  .About .container {
+    flex-direction: row;
+  }
+}
+
+.About .container .box-about-texto h3 {
+  font-size: 3rem;
+}
+
+.About .container .box-about-texto p {
+  font-size: 1.6rem;
+}
+
+.About .images-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 993px){
+  .About .images-wrapper{
+    flex-direction: row;
+    gap:  2rem;
+  }
+}
+
+.About .images-wrapper img:nth-child(2){
+  margin-top: 2rem;
+}
+
+.Footer {
+  background-color: var(--highlight-dark);
+  height: max-content;
+  padding: 3rem 0;
+}
+
+.Footer .container {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+@media screen and (min-width: 993px){
+  .Footer .container {
+    gap: 7rem;
+  }
+}
+
+.Footer .container img {
+  max-width: 30rem; 
+  margin-right: auto; 
+}
+
+.Footer .container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Footer .container ul li {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  color: var(--highlight-light);
+}
+
+.Footer .container ul li:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 993px) {
+  .Footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Footer .container img {
+    margin: 0 auto 2rem auto;
   }
 }
