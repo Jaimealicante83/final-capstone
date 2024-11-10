@@ -3,9 +3,9 @@ import Card from './components/Card';
 
 function Specials() {  
   return (
-    <div className="Specials">
+    <section className="Specials">
       <div className="container">
-        <h2 class="subtitle">Specials</h2>
+        <h2 className="subtitle">Specials</h2>
         <div className="cards-wrapper">
           <Card 
             image="assets/salad.jpg"
@@ -19,7 +19,7 @@ function Specials() {
             description="Savor our special Lemon Cake, a blend of tender chicken with a zesty lemon sauce."
             buttonText="Order now"
           />
-         <Card 
+          <Card 
             image="assets/brochea.jpg"
             title="La Bruschetta"
             description="Savor our special Bruschetta, a blend of tender chicken with a zesty lemon sauce."
@@ -27,7 +27,7 @@ function Specials() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

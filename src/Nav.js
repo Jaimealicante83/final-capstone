@@ -1,21 +1,40 @@
 import './App.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Nav() {  
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScroll = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/"); 
+      setTimeout(() => {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
-    <div className="Nav">
-      <div class="container">
-        <img src="assets/logo-lemon.png" alt="logo" />
+    <nav className="Nav">
+      <div className="container">
+        <a href="#" onClick={() => handleScroll('nav')}><img src="assets/logo-lemon.png" alt="logo" /></a>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/menu">Menu</Link></li>
-          <li><Link to="/reservations">Reservations</Link></li>
-          <li><Link to="/order">Order Online</Link></li>
-          <li><Link to="/login">Login</Link></li>
+          <li><a href="#" onClick={() => handleScroll('nav')}>Home</a></li>
+          <li><a href="#" onClick={() => handleScroll('specials')}>Specials</a></li>
+          <li><a href="#" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
+          <li><a href="#" onClick={() => handleScroll('about')}>About</a></li>
+          <li><Link to="/booking">Reservations</Link></li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
 

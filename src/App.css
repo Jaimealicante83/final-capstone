@@ -86,15 +86,16 @@ h1{
   font-size: 1.8rem;
   font-weight: 700;
   padding: 1rem 2rem;
-  background-color: var(--highlight-dark);
-  color: white;
+  background-color: var(--primary-yellow);
+  color: var(--highlight-dark);
   letter-spacing: .1rem;
   cursor: pointer;
   transition: all .3s ease-in-out;
 }
 
 .btn-black:hover{
-  background-color: black;
+  background-color: var(--highlight-dark);
+  color: var(--highlight-light);
 }
 
 .container{
@@ -146,6 +147,11 @@ h1{
   font-size: 1.8rem;
   color: white;
   text-decoration: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.Nav ul li a:hover{
+  color: var(--primary-yellow);
 }
 
 .Hero .container{
@@ -227,6 +233,7 @@ h1{
   border: 1px solid black;
   padding: 1rem;
   max-width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 993px){
@@ -391,6 +398,15 @@ h1{
   font-weight: 200;
   margin-bottom: 1rem;
   color: var(--highlight-light);
+  cursor: pointer;
+}
+
+.Footer .container ul li a{
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  color: var(--highlight-light);
+  text-decoration: none;
 }
 
 .Footer .container ul li:nth-child(1) {

@@ -1,37 +1,38 @@
 import './App.css';
 
-function Footer() {  
+function Footer() { 
+   
   return (
-    <div className="Footer">
-      <div class="container">
-        <img src="assets/logo-lemon.png" />
-        <div class="wrapper-navigation">
+    <footer className="Footer">
+      <div className="container">
+        <img src="assets/logo-lemon.png" alt="Little Lemon Logo" />
+        <nav className="wrapper-navigation">
           <ul>
             <li>Navigation</li>
-            <li>Home</li>
-            <li>Testimonials</li>
-            <li>Menu</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#specials">Menu</a></li>
           </ul>
-        </div>
-        <div class="wrapper-media">
+        </nav>
+        <div className="wrapper-media">
           <ul>
             <li>Social Media</li>
             <li>Facebook</li>
-            <li>X</li>
+            <li>X (formerly Twitter)</li>
             <li>Instagram</li>
           </ul>
         </div>
-        <div class="wrapper-contact">
+        <address className="wrapper-contact">
           <ul>
-            <li>Social Media</li>
-            <li>littlelemon@lemon.com</li>
-            <li>Tel: 0001-2020-0202</li>
-            <li>Long street 11 Seattle</li>
+            <li>Contact</li>
+            <li>Email: littlelemon@lemon.com</li>
+            <li>Phone: 0001-2020-0202</li>
+            <li>Address: Long street 11, Seattle</li>
           </ul>
-        </div>
+        </address>
       </div>
-    </div>
+    </footer>
   );
 }
 
-export default Footer;  
+export default Footer;

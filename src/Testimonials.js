@@ -3,7 +3,7 @@ import CardTestimonial from './components/CardTestimonial';
 
 function Testimonials() {  
   return (
-    <div className="Testimonials">
+    <section className="Testimonials">
       <div className="container">
         <h2 className="subtitle">Testimonials</h2>
         <div className="testimonial-wrapper">
@@ -27,8 +27,8 @@ function Testimonials() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default Testimonials;  
+export default Testimonials;
