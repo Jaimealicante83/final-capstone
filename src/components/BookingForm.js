@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { fetchAPI } from '../apiFunctions';
 
-function BookingForm({ availableTimes, dispatch, submitForm }) {
+function BookingForm({ availableTimes = [], dispatch, submitForm }) {
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
@@ -37,12 +37,16 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
       </label>
       <label>
         Hora:
-        <select value={time} onChange={(e) => setTime(e.target.value)}>
-          {availableTimes.map((timeOption) => (
-            <option key={timeOption} value={timeOption}>
-              {timeOption}
-            </option>
-          ))}
+        <select value={time} onChange={(e) => setTime(e.target.value)} disabled={availableTimes.length === 0}>
+          {availableTimes.length === 0 ? (
+            <option value="">No times available</option>
+          ) : (
+            availableTimes.map((timeOption) => (
+              <option key={timeOption} value={timeOption}>
+                {timeOption}
+              </option>
+            ))
+          )}
         </select>
       </label>
       <label>
@@ -62,7 +66,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
           <option value="Anniversary">Anniversary</option>
         </select>
       </label>
-      <button type="submit">Reservar</button>
+      <button type="submit">Book Now</button>
     </form>
   );
 }

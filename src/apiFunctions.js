@@ -15,15 +15,18 @@ export const fetchAPI = async (date) => {
     }
   };
   
-  // Función para actualizar tiempos
   export const updateTimes = (state, action) => {
     switch (action.type) {
       case 'INITIALIZE_TIMES':
         return action.payload;
+      case 'UPDATE_TIMES':
+        return action.payload; // Maneja la actualización de tiempos con la acción 'UPDATE_TIMES'
       default:
         return state;
     }
   };
+  
+  
   
   // Simulación de submitAPI (puedes reemplazar con tu lógica real)
   export const submitAPI = async (formData) => {
