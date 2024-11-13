@@ -17,9 +17,9 @@ function Footer() {
         <div className="wrapper-media">
           <ul>
             <li>Social Media</li>
-            <li>Facebook</li>
-            <li>X (formerly Twitter)</li>
-            <li>Instagram</li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.x.com" target="_blank">X (formerly Twitter)</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
           </ul>
         </div>
         <address className="wrapper-contact">

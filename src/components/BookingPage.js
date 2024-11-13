@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importar useNavigate aquí
 import BookingForm from './BookingForm';
 import { initializeTimes, submitAPI } from '../apiFunctions';
+import '../App.css';
 
 function BookingPage({ dispatch }) {
   const [availableTimes, setAvailableTimes] = useState([]);

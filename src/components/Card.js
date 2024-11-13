@@ -1,16 +1,22 @@
-
+import { useNavigate } from 'react-router-dom';
 
 function Card({ image, title, description, buttonText }) {  
-    return (
-      <div className="Card">
-        <div className="card">
-          <img src={image} alt={title} />
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <button className="btn-black">{buttonText}</button>
-        </div>
+  const navigate = useNavigate(); 
+
+  const handleButtonClick = () => {
+    navigate('/booking'); 
+  };
+
+  return (
+    <div className="Card">
+      <div className="card">
+        <img src={image} alt={title} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <button className="btn-black" onClick={handleButtonClick} aria-label="Book a table on click">{buttonText}</button>
       </div>
-    );
-  }
-  
-  export default Card;
+    </div>
+  );
+}
+
+export default Card;

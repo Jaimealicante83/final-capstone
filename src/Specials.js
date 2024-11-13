@@ -17,13 +17,13 @@ function Specials() {
             image="assets/cake.jpg"
             title="Lemon Cake"
             description="Savor our special Lemon Cake, a blend of tender chicken with a zesty lemon sauce."
-            buttonText="Order now"
+            buttonText="Book now"
           />
           <Card 
             image="assets/brochea.jpg"
             title="La Bruschetta"
             description="Savor our special Bruschetta, a blend of tender chicken with a zesty lemon sauce."
-            buttonText="Order now"
+            buttonText="Book now"
           />
         </div>
       </div>
